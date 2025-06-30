@@ -1,0 +1,21 @@
+name: Run MCP Server
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  run-mcp-server:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install mcp_server_time
+        run: pip install mcp_server_time
+      - name: Run MCP Server
+        run: python -m mcp_server_time --local-timezone=America/Los_Angeles
