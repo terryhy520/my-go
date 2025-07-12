@@ -1,0 +1,10 @@
+# 忽略构建结果
+myapp
+myapp.exe
+
+# 忽略 IDE 配置
+.vscode/
+.idea/
+
+# 忽略依赖缓存
+go.sum
