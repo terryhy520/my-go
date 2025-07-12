@@ -4,9 +4,9 @@ import (
 	"context"
 	"testing"
 
+	"github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/authorization/armauthorization/v3"
 	"github.com/golang/mock/gomock"
 	"github.com/terryhy520/my-go/mocks"
-	"github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/authorization/armauthorization/v3"
 )
 
 func TestMockRoleAssignmentsClientInterface_Create(t *testing.T) {
